@@ -1,0 +1,4 @@
+char(8 bits)	- letras e símbolos:   'a',  'b', 'H', '^', '*','1','0'
+int(16 bits) de -32767 até 32767 (apenas números inteiros)
+float(32 bits)	de -3.4 x 1038 até +3.4 x 10+38com até 6 dígitos de precisão
+double(64 bits)	de -1.7 x 10308 até +1.7 x 10+308com até 10 dígitos de precisão
