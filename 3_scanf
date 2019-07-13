@@ -1,0 +1,4 @@
+Função para ler dados externos:
+
+scanf ("%d", dado);
+
