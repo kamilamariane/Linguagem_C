@@ -1,2 +1,2 @@
 # Linguagem_C
-Funções e exemplos da linguagem de programação  C
+Funções, bibliotecas e exemplos da linguagem de programação  C
