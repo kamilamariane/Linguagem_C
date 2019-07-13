@@ -1,4 +1,4 @@
 char - letras e símbolos:   'a',  'b', 'H', '^', '*','1','0' (utiliza-se "%c")
 int - de -32767 até 32767 (apenas números inteiros) (utiliza-se "%d")
 float -	de -3.4 x 1038 até +3.4 x 10+38com até 6 dígitos de precisão (utiliza-se "%f")
-double -	de -1.7 x 10308 até +1.7 x 10+308com até 10 dígitos de precisão (utiliza-se "%f")
+double - de -1.7 x 10308 até +1.7 x 10+308com até 10 dígitos de precisão (utiliza-se "%f")
