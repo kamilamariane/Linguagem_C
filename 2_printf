@@ -1,3 +1,8 @@
 Função utilizada para escrever na tela, comunicação com o usuário:
 
 printf ("eai men");
+
+//para imprimir variaveis
+int numero = 5;
+printf ("%d é igual a 2+3",numero);
+//saida: 5 é igual a 2+3
