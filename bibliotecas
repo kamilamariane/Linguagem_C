@@ -1,3 +1,7 @@
 1) #include <stdio.h>
 standart in out, serve para imprimir e ler dados
-2)
+contém funções printf e scanf
+
+2) #include <stdlib.h>
+serve para pausar o programa
+possui a função system ("pause") 
