@@ -1,4 +1,5 @@
 Função para ler dados externos:
 
 scanf ("%d", dado);
+//lendo um valor inteiro e guardando na variável dado
 
