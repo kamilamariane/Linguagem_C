@@ -3,5 +3,6 @@ standart in out, serve para imprimir e ler dados
 contém funções printf e scanf
 
 2) #include <stdlib.h>
-serve para pausar o programa
-possui a função system ("pause") 
+Essa biblioteca é muito interessante, pois com apenas algumas linhas de comando você consegue
+acessar pastas, mover diretorios, executar programas
+serve, por exemplo para pausar o programa utilizando a função system ("pause")
