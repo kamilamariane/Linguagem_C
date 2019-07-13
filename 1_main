@@ -1,0 +1,5 @@
+int main (){
+return 0;
+}
+
+//é a principal função de um programa, a função "mãe"
