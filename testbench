@@ -1,8 +1,10 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
+use work.pacote.all;
+use ieee.numeric_std.all;
 
-ENTITY TB_ReleTrifasico IS
-END TB_ReleTrifasico;
+ENTITY TB_cronometro IS
+END TB_cronometro;
 
 
 ARCHITECTURE rtl OF TB_ReleTrifasico IS
