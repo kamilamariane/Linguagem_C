@@ -1,0 +1,133 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+ENTITY TB_ReleTrifasico IS
+END TB_ReleTrifasico;
+ARCHITECTURE rtl OF TB_ReleTrifasico IS
+COMPONENT ReleTrifasico
+PORT(
+clk: IN STD_LOGIC;
+ca: IN STD_LOGIC;
+cb: IN STD_LOGIC;
+cc: IN STD_LOGIC;
+e: IN STD_LOGIC;
+c_sec: OUT STD_LOGIC;
+la: OUT STD_LOGIC;
+lb: OUT STD_LOGIC;
+lc: OUT STD_LOGIC
+);
+END COMPONENT;
+SIGNAL clk : STD_LOGIC;
+SIGNAL ca : STD_LOGIC;
+SIGNAL cb : STD_LOGIC;
+SIGNAL cc : STD_LOGIC;
+SIGNAL e : STD_LOGIC;
+SIGNAL c_sec : STD_LOGIC;
+SIGNAL la : STD_LOGIC;
+SIGNAL lb : STD_LOGIC;
+SIGNAL lc : STD_LOGIC;
+CONSTANT clk_period : time := 1 ns;
+BEGIN
+dut: ReleTrifasico PORT MAP
+(
+clk => clk,
+ca => ca,
+cb => cb,
+cc => cc,
+e => e,
+c_sec => c_sec,
+la => la,
+lb => lb,
+lc => lc
+);
+
+clock_process: PROCESS
+BEGIN
+clk <= '0';
+WAIT FOR clk_period/2;
+clk <= '1';
+WAIT FOR clk_period/2;
+END PROCESS;
+stim_proc: PROCESS
+BEGIN
+WAIT FOR 5 ns;
+ca <= '0';
+cb <= '0';
+cc <= '0';
+e <= '0';
+WAIT FOR 5 ns;
+ca <= '1';
+cb <= '0';
+cc <= '0';
+e <= '0';
+WAIT FOR 5 ns;
+ca <= '0';
+cb <= '1';
+cc <= '0';
+e <= '0';
+WAIT FOR 5 ns;
+ca <= '1';
+cb <= '1';
+cc <= '0';
+e <= '0';
+WAIT FOR 5 ns;
+ca <= '0';
+cb <= '0';
+cc <= '1';
+e <= '0';
+WAIT FOR 5 ns;
+ca <= '1';
+cb <= '0';
+cc <= '1';
+e <= '0';
+WAIT FOR 5 ns;
+ca <= '0';
+cb <= '1';
+cc <= '1';
+e <= '0';
+WAIT FOR 5 ns;
+ca <= '1';
+cb <= '1';
+cc <= '1';
+e <= '0';
+WAIT FOR 5 ns;
+ca <= '0';
+cb <= '0';
+cc <= '0';
+e <= '1';
+WAIT FOR 5 ns;
+ca <= '1';
+cb <= '0';
+cc <= '0';
+e <= '1';
+WAIT FOR 5 ns;
+ca <= '0';
+cb <= '1';
+cc <= '0';
+e <= '1';
+WAIT FOR 5 ns;
+ca <= '1';
+cb <= '1';
+cc <= '0';
+e <= '1';
+WAIT FOR 5 ns;
+ca <= '0';
+cb <= '0';
+cc <= '1';
+e <= '1';
+WAIT FOR 5 ns;
+ca <= '1';
+cb <= '0';
+cc <= '1';
+e <= '1';
+WAIT FOR 5 ns;
+ca <= '0';
+cb <= '1';
+cc <= '1';
+e <= '1';
+WAIT FOR 5 ns;
+ca <= '1';
+cb <= '1';
+cc <= '1';
+e <= '1';
+END PROCESS;
+END rtl;
