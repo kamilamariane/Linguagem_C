@@ -42,7 +42,7 @@ architecture behavioural of cronometro is
 		HEX6_D <= integertoseg(HH0);
 		HEX7_D <= integertoseg(HH1);
 		S_P <= toboolean(START_PAUSE);
-		R_T <= not toboolean(RESTART);
+		R_T <= not toboolean(RESTART); -- not pois se o sinal de restart for pressionado(1), queremos que volte pra zero
 		
 		process(CLOCK_50)
 		begin
