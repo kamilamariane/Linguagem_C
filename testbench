@@ -56,95 +56,20 @@ ARCHITECTURE rtl OF TB_cronometro IS
         TB_HEX7_D => HEX7_D,
     );
 
-    clock_process: PROCESS
-    BEGIN
-        clk <= '0';
-        WAIT FOR clk_period/2;
-        clk <= '1';
-        WAIT FOR clk_period/2;
-    END PROCESS;
     
-    stim_proc: PROCESS
+    SPR_process: PROCESS
     BEGIN
-              WAIT FOR 5 ns;
-              ca <= '0';
-              cb <= '0';
-              cc <= '0';
-              e <= '0';
-              WAIT FOR 5 ns;
-              ca <= '1';
-              cb <= '0';
-              cc <= '0';
-              e <= '0';
-              WAIT FOR 5 ns;
-              ca <= '0';
-              cb <= '1';
-              cc <= '0';
-              e <= '0';
-              WAIT FOR 5 ns;
-              ca <= '1';
-              cb <= '1';
-              cc <= '0';
-              e <= '0';
-              WAIT FOR 5 ns;
-              ca <= '0';
-              cb <= '0';
-              cc <= '1';
-              e <= '0';
-              WAIT FOR 5 ns;
-              ca <= '1';
-              cb <= '0';
-              cc <= '1';
-              e <= '0';
-              WAIT FOR 5 ns;
-              ca <= '0';
-              cb <= '1';
-              cc <= '1';
-              e <= '0';
-              WAIT FOR 5 ns;
-              ca <= '1';
-              cb <= '1';
-              cc <= '1';
-              e <= '0';
-              WAIT FOR 5 ns;
-              ca <= '0';
-              cb <= '0';
-              cc <= '0';
-              e <= '1';
-              WAIT FOR 5 ns;
-              ca <= '1';
-              cb <= '0';
-              cc <= '0';
-              e <= '1';
-              WAIT FOR 5 ns;
-              ca <= '0';
-              cb <= '1';
-              cc <= '0';
-              e <= '1';
-              WAIT FOR 5 ns;
-              ca <= '1';
-              cb <= '1';
-              cc <= '0';
-              e <= '1';
-              WAIT FOR 5 ns;
-              ca <= '0';
-              cb <= '0';
-              cc <= '1';
-              e <= '1';
-              WAIT FOR 5 ns;
-              ca <= '1';
-              cb <= '0';
-              cc <= '1';
-              e <= '1';
-              WAIT FOR 5 ns;
-              ca <= '0';
-              cb <= '1';
-              cc <= '1';
-              e <= '1';
-              WAIT FOR 5 ns;
-              ca <= '1';
-              cb <= '1';
-              cc <= '1';
-              e <= '1';
+              WAIT FOR 50 s;
+              TB_RESTART <= '1';
+             
+              WAIT FOR 5 s;
+              TB_START_PAUSE <= '1';
+           
+              WAIT FOR 5 s;
+              TB_START_PAUSE <= '1';
+             
+              WAIT FOR 1500 s;
+              TB_RESTART <= '1';
+              
     END PROCESS;
 END rtl;
