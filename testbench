@@ -41,17 +41,19 @@ ARCHITECTURE rtl OF TB_cronometro IS
    
     
     BEGIN
-    dut: ReleTrifasico PORT MAP
+    dut: cronometro PORT MAP
     (
-        clk => clk,
-        ca => ca,
-        cb => cb,
-        cc => cc,
-        e => e,
-        c_sec => c_sec,
-        la => la,
-        lb => lb,
-        lc => lc
+        TB_CLOCK_50 => CLOCK_50,
+        TB_START_PAUSE => START_PAUSE,
+        TB_RESTART => RESTART,
+        TB_HEX0_D => HEX0_D,
+        TB_HEX1_D => HEX1_D,
+        TB_HEX2_D => HEX2_D,
+        TB_HEX3_D => HEX3_D,
+        TB_HEX4_D => HEX4_D,
+        TB_HEX5_D => HEX5_D,
+        TB_HEX6_D => HEX6_D,
+        TB_HEX7_D => HEX7_D,
     );
 
     clock_process: PROCESS
